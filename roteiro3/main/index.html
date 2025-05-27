@@ -781,6 +781,12 @@
 <h2 id="34-tarefa-4">3.4 Tarefa 4</h2>
 <ol>
 <li>Escreva um relatório dos passos utilizados. (Coloque em uma seção do material a ser entregue do roteiro - MkDocs!!!!!!!)</li>
+</ol>
+<p>Primeiramente, para levantar duas instâncias com a API do FastAPI, foi necessário criar uma rede virtual no OpenStack. Em seguida, foram criadas duas instâncias de máquinas virtuais (VMs) com o Ubuntu Server 22.04, que serviram como servidores para a aplicação FastAPI.
+Essas VMs foram conectadas à rede virtual criada anteriormente. Publicamos uma imagem do FastAPI no Docker Hub, e depois, instalamos o Docker nas VMs. Com o Docker instalado, baixamos a imagem do FastAPI e executamos os containers.</p>
+<p>Para o banco de dados, utilizamos o PostgreSQL, que foi instalado em uma das VMs. Configuramos o banco de dados para aceitar conexões da rede virtual e criamos as tabelas necessárias para a aplicação.</p>
+<p>Por fim, configuramos um balanceador de carga (Nginx) para distribuir as requisições entre as duas instâncias do FastAPI. O Nginx foi instalado em uma VM separada, que também estava conectada à rede virtual. Essa VM atuou como um ponto de entrada para as requisições, encaminhando-as para as instâncias do FastAPI.</p>
+<ol>
 <li>Anexe fotos e/ou diagramas contendo: arquitetura de rede da sua infraestrutura dentro do Dashboard do Openstack</li>
 <li>Lista de VMs utilizadas com nome e IPs alocados,
 Print do Dashboard do FastAPI conectado via máquina Nginx/LB.</li>
