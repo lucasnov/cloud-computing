@@ -747,51 +747,75 @@
 <h2 id="3-setup-do-openstack">3. Setup do OpenStack</h2>
 <p>Nesta etapa, configuramos os serviços que controlam as VMs, como o <strong>Nova</strong>, o <strong>Neutron</strong>, que gerencia a rede, o <strong>Cinder</strong>, que cuida do armazenamento, além de configurar o <strong>Horizon</strong>, que é o painel de controle do OpenStack.</p>
 <h3 id="31-tarefa-1">3.1 Tarefa 1</h3>
-<p>A) Verificar o status do Juju</p>
-<p><a class="glightbox" href="img/status-juju.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Status Juju" src="img/status-juju.png" /></a></p>
-<p>B) Dashboard MAAS
-<a class="glightbox" href="img/maas-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MAAS Dashboard" src="img/maas-dashboard.png" /></a></p>
-<p>C) Aba compute overview no OpenStack
-<a class="glightbox" href="img/compute-overview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Overview" src="img/compute-overview.png" /></a></p>
-<p>D) Aba compute instances no OpenStack
-<a class="glightbox" href="img/compute-instances.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Instances" src="img/compute-instances.png" /></a></p>
-<p>E) Aba network topology no OpenStack
-<a class="glightbox" href="img/network-topology.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network Topology" src="img/network-topology.png" /></a></p>
+<p>A) Verificar o status do Juju<br />
+<a class="glightbox" href="../img/status-juju.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Status Juju" src="../img/status-juju.png" width="500px" /></a></p>
+<p>B) Dashboard MAAS<br />
+<a class="glightbox" href="../img/maas-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MAAS Dashboard" src="../img/maas-dashboard.png" width="500px" /></a></p>
+<p>C) Aba compute overview no OpenStack<br />
+<a class="glightbox" href="../img/compute-overview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Overview" src="../img/compute-overview.png" width="500px" /></a></p>
+<p>D) Aba compute instances no OpenStack<br />
+<a class="glightbox" href="../img/compute-instances-vazio.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Instances" src="../img/compute-instances-vazio.png" width="500px" /></a></p>
+<p>E) Aba network topology no OpenStack<br />
+<a class="glightbox" href="../img/network-topology.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network Topology" src="../img/network-topology.png" width="500px" /></a></p>
+<hr />
 <h2 id="32-tarefa-2">3.2 Tarefa 2</h2>
 <ol>
-<li>
+<li></li>
+</ol>
 <p>A. <strong>Dashboard do MAAS com as máquinas</strong><br />
-<a class="glightbox" href="img/maas-dashboard-maquinas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MAAS Dashboard com Máquinas" src="img/maas-dashboard-maquinas.png" /></a></p>
+<a class="glightbox" href="../img/maas-dashboard-maquinas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MAAS Dashboard com Máquinas" src="../img/maas-dashboard-maquinas.png" width="500px" /></a></p>
 <p>B. <strong>Aba compute overview no OpenStack</strong><br />
-<a class="glightbox" href="img/compute-overview2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Overview" src="img/compute-overview2.png" /></a></p>
+<a class="glightbox" href="../img/compute-overview2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Overview" src="../img/compute-overview2.png" width="500px" /></a></p>
 <p>C. <strong>Aba compute instances no OpenStack</strong><br />
-<a class="glightbox" href="img/compute-instances2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Instances" src="img/compute-instances2.png" /></a></p>
+<a class="glightbox" href="../img/compute-instances-tarefa2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Instances" src="../img/compute-instances-tarefa2.png" width="500px" /></a></p>
 <p>D. <strong>Aba network topology no OpenStack</strong><br />
-<a class="glightbox" href="img/network-topology2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network Topology" src="img/network-topology2.png" /></a></p>
+<a class="glightbox" href="../img/network-topology2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network Topology" src="../img/network-topology2.png" width="500px" /></a></p>
+<ol>
+<li>
+<p><strong>Enumere as diferenças encontradas entre os prints das telas na Tarefa 1 e na Tarefa 2.</strong><br />
+Antes não havia nenhuma instância criada e agora temos uma instancia criada no OpenStack, além de uma rede virtual configurada. O dashboard do MAAS agora mostra as máquinas disponíveis, e a aba de compute overview no OpenStack exibe informações sobre as instâncias criadas. A aba de compute instances agora mostra a instância criada, e a aba de network topology exibe a rede virtual configurada.</p>
 </li>
 <li>
-<p><strong>Enumere as diferenças encontradas entre os prints das telas na Tarefa 1 e na Tarefa 2.</strong></p>
-</li>
-<li>
-<p><strong>Explique como cada recurso foi criado.</strong></p>
+<p><strong>Explique como cada recurso foi criado.</strong><br />
+Para criar a instância, foi configurado pelo Horizon, o painel de controle do OpenStack. Foi necessário selecionar a imagem do Ubuntu Server 22.04, escolher o tipo de instância, alocar os recursos necessários (CPU, memória e disco) e associar a instância à rede virtual criada anteriormente. Após isso, a instância foi lançada e ficou disponível para uso.</p>
 </li>
 </ol>
+<hr />
 <h2 id="33-tarefa-3">3.3 Tarefa 3</h2>
-<p>Arquitetura de rede </p>
+<p>Arquitetura de rede<br />
+<a class="glightbox" href="../img/arquitetura-rede.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Arquitetura de Rede" src="../img/arquitetura-rede.png" width="500px" /></a></p>
+<hr />
 <h2 id="34-tarefa-4">3.4 Tarefa 4</h2>
 <ol>
 <li>Escreva um relatório dos passos utilizados. (Coloque em uma seção do material a ser entregue do roteiro - MkDocs!!!!!!!)</li>
 </ol>
-<p>Primeiramente, para levantar duas instâncias com a API do FastAPI, foi necessário criar uma rede virtual no OpenStack. Em seguida, foram criadas duas instâncias de máquinas virtuais (VMs) com o Ubuntu Server 22.04, que serviram como servidores para a aplicação FastAPI.
+<p>Primeiramente, para levantar duas instâncias com a API do FastAPI, foi necessário criar uma rede virtual no OpenStack. Em seguida, foram criadas duas instâncias de máquinas virtuais (VMs) com o Ubuntu Server 22.04, que serviram como servidores para a aplicação FastAPI.<br />
 Essas VMs foram conectadas à rede virtual criada anteriormente. Publicamos uma imagem do FastAPI no Docker Hub, e depois, instalamos o Docker nas VMs. Com o Docker instalado, baixamos a imagem do FastAPI e executamos os containers.</p>
 <p>Para o banco de dados, utilizamos o PostgreSQL, que foi instalado em uma das VMs. Configuramos o banco de dados para aceitar conexões da rede virtual e criamos as tabelas necessárias para a aplicação.</p>
 <p>Por fim, configuramos um balanceador de carga (Nginx) para distribuir as requisições entre as duas instâncias do FastAPI. O Nginx foi instalado em uma VM separada, que também estava conectada à rede virtual. Essa VM atuou como um ponto de entrada para as requisições, encaminhando-as para as instâncias do FastAPI.</p>
 <ol>
-<li>Anexe fotos e/ou diagramas contendo: arquitetura de rede da sua infraestrutura dentro do Dashboard do Openstack</li>
-<li>Lista de VMs utilizadas com nome e IPs alocados,
-Print do Dashboard do FastAPI conectado via máquina Nginx/LB.</li>
-<li>Prints, cada um demonstrando em qual server (máquina fisica) cada instância foi alocado pelo OpenStack.</li>
+<li>
+<p>Anexe fotos e/ou diagramas contendo: arquitetura de rede da sua infraestrutura dentro do Dashboard do Openstack<br />
+<a class="glightbox" href="../img/network-topology3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="network topology 3" src="../img/network-topology3.png" width="500px" /></a></p>
+</li>
+<li>
+<p>Lista de VMs utilizadas com nome e IPs alocados<br />
+<a class="glightbox" href="../img/lista-vms.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Lista de VMs" src="../img/lista-vms.png" width="500px" /></a></p>
+</li>
 </ol>
+<p><strong>Dashboard do FastAPI</strong><br />
+<a class="glightbox" href="../img/fastapi-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="FastAPI Dashboard" src="../img/fastapi-dashboard.png" width="500px" /></a></p>
+<ol>
+<li>Prints, cada um demonstrando em qual server (máquina física) cada instância foi alocada pelo OpenStack.</li>
+</ol>
+<p><strong>Nginx</strong><br />
+<a class="glightbox" href="../img/nginx-overview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Nginx" src="../img/nginx-overview.png" width="500px" /></a></p>
+<p><strong>FastAPI 1</strong><br />
+<a class="glightbox" href="../img/api1-overview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="FastAPI 1" src="../img/api1-overview.png" width="500px" /></a></p>
+<p><strong>FastAPI 2</strong><br />
+<a class="glightbox" href="../img/api2-overview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="FastAPI 2" src="../img/api2-overview.png" width="500px" /></a></p>
+<p><strong>PostgreSQL</strong><br />
+<a class="glightbox" href="../img/banco-overview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="PostgreSQL" src="../img/banco-overview.png" width="500px" /></a></p>
 
 
 
@@ -858,6 +882,10 @@ Print do Dashboard do FastAPI conectado via máquina Nginx/LB.</li>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../js/init-mermaid.js# ← ADICIONE ESTA LINHA"></script>
       
         <script src="../../assets/javascripts/badge.js" async></script>
       

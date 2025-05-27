@@ -132,7 +132,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objetivo" class="md-skip">
+        <a href="#relatorio-roteiro-2-de-computacao-em-nuvem" class="md-skip">
           Skip to content
         </a>
       
@@ -425,6 +425,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -457,6 +459,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -465,9 +469,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#1-objetivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivo
+      1. Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-deploy-de-aplicacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Deploy de Aplicações
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tarefa" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tarefa
     </span>
   </a>
   
@@ -574,6 +605,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -582,9 +615,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#1-objetivo" class="md-nav__link">
     <span class="md-ellipsis">
-      Objetivo
+      1. Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-deploy-de-aplicacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Deploy de Aplicações
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tarefa" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Tarefa
     </span>
   </a>
   
@@ -609,9 +669,52 @@
   
 
 
-  <h1>Roteiro 2</h1>
-
-<h2 id="objetivo">Objetivo</h2>
+<h1 id="relatorio-roteiro-2-de-computacao-em-nuvem">Relatório Roteiro 2 de Computação em Nuvem</h1>
+<p><strong>Autores:</strong> Lucas Novais, Mariana Albuquerque</p>
+<hr />
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>O roteiro tem como objetivo ensinar, na prática, como orquestrar o deploy de aplicações em uma infraestrutura bare metal usando o Juju junto com o MAAS. A ideia é mostrar como conectar essas ferramentas, criar um controlador e fazer o deploy de aplicações reais, como o <strong>Grafana</strong> e o <strong>Prometheus</strong>.</p>
+<p><strong>Hardware utilizado (Bare Metal):</strong></p>
+<ul>
+<li>1 NUC (main) com 10 GB RAM e 1 SSD (120 GB)  </li>
+<li>1 NUC (server1) com 12 GB RAM e 1 SSD (120 GB)  </li>
+<li>1 NUC (server2) com 16 GB RAM e 2 SSD (120 GB + 120 GB)  </li>
+<li>1 NUC (server3) com 32 GB RAM e 2 SSD (120 GB + 120 GB)  </li>
+<li>1 Switch DLink DSG-1210-28 (28 portas)  </li>
+<li>1 Roteador TP-Link TL-R470T+</li>
+</ul>
+<hr />
+<h2 id="2-infraestrutura">2. Infraestrutura</h2>
+<p>Essa etapa do roteiro ensina como preparar a infraestrutura para o Juju usar o MAAS como provedor de máquinas.</p>
+<ol>
+<li>Garantimos que as máquinas estejam no estado “Ready” no MAAS.  </li>
+<li>Instalamos o Juju no servidor principal com <code>snap</code>.  </li>
+<li>Criamos o <code>maas-creds.yaml</code> com a <strong>API Key do MAAS</strong>, permitindo a comunicação entre o Juju e o MAAS.  </li>
+<li>Inicializamos o controlador com <code>juju bootstrap</code>, escolhendo a máquina <code>server1</code>.</li>
+</ol>
+<hr />
+<h2 id="3-deploy-de-aplicacoes">3. Deploy de Aplicações</h2>
+<p>Após preparar a infraestrutura:</p>
+<ol>
+<li>Instalamos o <strong>Dashboard do Juju</strong> no controlador para acompanhar visualmente os deploys.</li>
+<li>Garantimos o modelo correto com <code>juju models</code> e <code>juju switch</code>.</li>
+<li>Baixamos os charms do Grafana e Prometheus com <code>juju download</code>.</li>
+<li>Fizemos o deploy com:
+   ```bash
+   juju deploy ./prometheus2_XXX.charm
+   juju deploy ./grafana_XXX.charm</li>
+</ol>
+<h2 id="4-tarefa">4. Tarefa</h2>
+<p><strong>MAAS Dashboard com as máquinas:</strong></p>
+<p><a class="glightbox" href="../img/maas-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MAAS Dashboard com Máquinas" src="../img/maas-dashboard.png" width="500px" /></a></p>
+<p><strong>juju status com Grafana ativo:</strong></p>
+<p><a class="glightbox" href="../img/juju-status-grafana.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Juju Status com Grafana Ativo" src="../img/juju-status-grafana.png" width="500px" /></a></p>
+<p><strong>Dashboard Grafana com Prometheus:</strong></p>
+<p><a class="glightbox" href="../img/grafana-prometheus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Dashboard Grafana com Prometheus" src="../img/grafana-prometheus.png" width="500px" /></a></p>
+<p><strong>Acessando dashboard pela rede do Insper:</strong></p>
+<p><a class="glightbox" href="../img/rede-insper.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Acessando Dashboard pela Rede do Insper" src="../img/rede-insper.png" width="500px" /></a></p>
+<p><strong>Aplicações ativas no Juju:</strong></p>
+<p><a class="glightbox" href="../img/aplicacoes-juju.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Aplicações Ativas no Juju" src="../img/aplicacoes-juju.png" width="500px" /></a></p>
 
 
 
@@ -678,6 +781,10 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../js/init-mermaid.js# ← ADICIONE ESTA LINHA"></script>
       
         <script src="../../assets/javascripts/badge.js" async></script>
       
