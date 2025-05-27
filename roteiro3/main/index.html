@@ -131,6 +131,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#relatorio-roteiro-3-de-computacao-em-nuvem" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -443,6 +448,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 3
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -455,6 +475,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-setup-do-openstack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Setup do OpenStack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Setup do OpenStack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-tarefa-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Tarefa 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-tarefa-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Tarefa 2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -530,6 +620,67 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-setup-do-openstack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Setup do OpenStack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Setup do OpenStack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-tarefa-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Tarefa 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-tarefa-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Tarefa 2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -548,9 +699,47 @@
   
 
 
-  <h1>Roteiro 3</h1>
-
-
+<h1 id="relatorio-roteiro-3-de-computacao-em-nuvem">Relatório Roteiro 3 de Computação em Nuvem</h1>
+<p><strong>Autores:</strong> Lucas Novais, Mariana Albuquerque</p>
+<hr />
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>O roteiro tem como objetivo entender os conceitos básicos de private cloud, bem como aprofundar conceitos sobre redes virtuais, sub-redes e o hardware que compõem essas entidades. Ademais, o aprendizado sobre a manipulação de plataformas de gerenciamento desse hardware.</p>
+<hr />
+<h2 id="2-infraestrutura">2. Infraestrutura</h2>
+<p>Para criarmos a infraestrutura necessária para este roteiro, precisamos implantar o Openstack, que é uma plataforma de computação em nuvem de código aberto. O OpenStack permite a criação e o gerenciamento de recursos de computação, armazenamento e rede em ambientes de nuvem privada.</p>
+<hr />
+<h2 id="3-setup-do-openstack">3. Setup do OpenStack</h2>
+<p>Nesta etapa, configuramos os serviços que controlam as VMs, como o <strong>Nova</strong>, o <strong>Neutron</strong>, que gerencia a rede, o <strong>Cinder</strong>, que cuida do armazenamento, além de configurar o <strong>Horizon</strong>, que é o painel de controle do OpenStack.</p>
+<h3 id="31-tarefa-1">3.1 Tarefa 1</h3>
+<p>A) Verificar o status do Juju</p>
+<p><a class="glightbox" href="img/status-juju.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Status Juju" src="img/status-juju.png" /></a></p>
+<p>B) Dashboard MAAS
+<a class="glightbox" href="img/maas-dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MAAS Dashboard" src="img/maas-dashboard.png" /></a></p>
+<p>C) Aba compute overview no OpenStack
+<a class="glightbox" href="img/compute-overview.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Overview" src="img/compute-overview.png" /></a></p>
+<p>D) Aba compute instances no OpenStack
+<a class="glightbox" href="img/compute-instances.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Instances" src="img/compute-instances.png" /></a></p>
+<p>E) Aba network topology no OpenStack
+<a class="glightbox" href="img/network-topology.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network Topology" src="img/network-topology.png" /></a></p>
+<h2 id="32-tarefa-2">3.2 Tarefa 2</h2>
+<ol>
+<li>
+<p>A. <strong>Dashboard do MAAS com as máquinas</strong><br />
+<a class="glightbox" href="img/maas-dashboard-maquinas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MAAS Dashboard com Máquinas" src="img/maas-dashboard-maquinas.png" /></a></p>
+<p>B. <strong>Aba compute overview no OpenStack</strong><br />
+<a class="glightbox" href="img/compute-overview2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Overview" src="img/compute-overview2.png" /></a></p>
+<p>C. <strong>Aba compute instances no OpenStack</strong><br />
+<a class="glightbox" href="img/compute-instances2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Compute Instances" src="img/compute-instances2.png" /></a></p>
+<p>D. <strong>Aba network topology no OpenStack</strong><br />
+<a class="glightbox" href="img/network-topology2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Network Topology" src="img/network-topology2.png" /></a></p>
+</li>
+<li>
+<p><strong>Enumere as diferenças encontradas entre os prints das telas na Tarefa 1 e na Tarefa 2.</strong></p>
+</li>
+<li>
+<p><strong>Explique como cada recurso foi criado.</strong></p>
+</li>
+</ol>
 
 
 
