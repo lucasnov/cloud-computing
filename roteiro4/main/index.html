@@ -95,8 +95,6 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/badge.css">
     
-      <link rel="stylesheet" href="../../termynal.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -132,7 +130,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#relatorio-roteiro-3-de-computacao-em-nuvem" class="md-skip">
+        <a href="#relatorio-roteiro-4-de-computacao-em-nuvem" class="md-skip">
           Skip to content
         </a>
       
@@ -523,6 +521,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-respostas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Respostas
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -596,6 +621,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-respostas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Respostas
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -615,10 +667,99 @@
   
 
 
-<h1 id="relatorio-roteiro-3-de-computacao-em-nuvem">Relatório Roteiro 3 de Computação em Nuvem</h1>
+<h1 id="relatorio-roteiro-4-de-computacao-em-nuvem">Relatório Roteiro 4 de Computação em Nuvem</h1>
 <p><strong>Autores:</strong> Lucas Novais, Mariana Albuquerque</p>
 <hr />
 <h2 id="1-objetivo">1. Objetivo</h2>
+<hr />
+<p>O roteiro tem como objetivo compreender os conceitos de Infraestrutura como Código (IaC), que envolve o gerenciamento e provisionamento de infraestrutura por meio de código ao invés de processos manuais e entender conceitos de SLA (Service Level Agreement) e DR (Disaster Recovery), que são essenciais para garantir a continuidade dos serviços e proteger contra falhas ou desastres imprevistos. Utilizaremos a ferramenta Terraform para implementar esses conceitos.</p>
+<hr />
+<h2 id="2-infraestrutura">2. Infraestrutura</h2>
+<hr />
+<p>Criamos no openstack um domínio Alunos e criamos um projeto para cada aluno, alem de criar dois novos usuários, um para cada integrante. Atribuimos papeis de admin para os usuários, permitindo que eles tenham controle total sobre os recursos dentro de seus respectivos projetos.</p>
+<hr />
+<h2 id="3-app">3. App</h2>
+<p>Foram criados os arquivos .tf dentro da pasta de projeto de cada um dos alunos. Moficamos os arquivos de configuração do Terraform para criarmos 2 instâncias para cada projeto. Foram feitas pequenas modificações nos arquivos base para atender às necessidades de cada aluno.</p>
+<div class="admonition info">
+<p class="admonition-title">Checkpoints Mariana</p>
+<ul>
+<li>Aba projects </li>
+</ul>
+<p><a class="glightbox" href="../img/projects_mariana.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="projeto mariana" src="../img/projects_mariana.png" width="700px" /></a></p>
+<ul>
+<li>Aba users</li>
+</ul>
+<p><a class="glightbox" href="../img/users_mariana.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="users mariana" src="../img/users_mariana.png" width="700px" /></a></p>
+<ul>
+<li>Compute overview</li>
+</ul>
+<p><a class="glightbox" href="../img/overview_mariana.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="compute overview mariana" src="../img/overview_mariana.png" width="700px" /></a></p>
+<ul>
+<li>Compute instances</li>
+</ul>
+<p><a class="glightbox" href="../img/instances_mariana.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="compute instances mariana" src="../img/instances_mariana.png" width="700px" /></a></p>
+<ul>
+<li>Network topology</li>
+</ul>
+<p><a class="glightbox" href="../img/network_topology_mariana.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="network topology mariana" src="../img/network_topology_mariana.png" width="700px" /></a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Checkpoints Lucas</p>
+<ul>
+<li>Aba projects </li>
+</ul>
+<p><a class="glightbox" href="../img/projects_lucas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="projeto lucas" src="../img/projects_lucas.png" width="700px" /></a></p>
+<ul>
+<li>Aba users</li>
+</ul>
+<p><a class="glightbox" href="../img/users_lucas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="users lucas" src="../img/users_lucas.png" width="700px" /></a></p>
+<ul>
+<li>Compute overview</li>
+</ul>
+<p><a class="glightbox" href="../img/overview_lucas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="compute overview lucas" src="../img/overview_lucas.png" width="700px" /></a></p>
+<ul>
+<li>Compute instances</li>
+</ul>
+<p><a class="glightbox" href="../img/instances_lucas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="compute instances lucas" src="../img/instances_lucas.png" width="700px" /></a></p>
+<ul>
+<li>Network topology</li>
+</ul>
+<p><a class="glightbox" href="../img/network_topology_lucas.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="network topology lucas" src="../img/network_topology_lucas.png" width="700px" /></a>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Exercício</p>
+<p>Você é o CTO (Chief Technology Officer) de uma grande empresa com sede em várias capitais no Brasil e precisa implantar um sistema crítico, de baixo custo e com dados sigilosos para a área operacional.</p>
+<p>a.Você escolheria Public Cloud ou Private Cloud?</p>
+<p>b. Agora explique para ao RH por que você precisa de um time de DevOps.</p>
+<p>Considerando o mesmo sistema crítico, agora sua equipe deverá planejar e implementar um ambiente resiliente e capaz de mitigar possíveis interrupções/indisponibilidades. Para isso, identifiquem quais são as principais ameaças que podem colocar sua infraestrutura em risco, e descreva as principais ações que possibilitem o restabelecimento de todas as aplicações de forma rápida e organizada caso algum evento cause uma interrupção ou incidente de segurança. Para isso monte um plano de DR e HA que considere entre as ações:</p>
+<p>Mapeamento das principais ameaças que podem colocar em riscos o seu ambiente.</p>
+<p>Elenque e priorize as ações para a recuperação de seu ambiente em uma possível interrupção/desastre.</p>
+<p>Como sua equipe irá tratar a política de backup?</p>
+<p>Considerando possíveis instabilidades e problemas, descreva como alta disponibilidade será implementada em sua infraestrutura.</p>
+</div>
+<hr />
+<h2 id="4-respostas">4. Respostas</h2>
+<hr />
+<p>a. Para um sistema crítico com dados sigilosos e baixo custo, uma solução híbrida pode ser a melhor escolha: utilizar Private Cloud para os dados sensíveis e partes críticas do sistema, e Public Cloud para cargas de trabalho menos sensíveis ou para aumentar a escalabilidade, dependendo da demanda. A Private Cloud proporcionaria maior segurança e controle sobre os dados sigilosos, enquanto a Public Cloud pode ser usada para escalabilidade e reduzir custos em áreas que não envolvem dados sensíveis.</p>
+<p>b. Um time de DevOps é essencial para garantir a integração contínua e entrega contínua (CI/CD) do software, permitindo que as atualizações sejam implementadas rapidamente e com qualidade. Além disso, o DevOps promove uma cultura de colaboração entre as equipes de desenvolvimento e operações, o que é crucial para manter a infraestrutura estável e eficiente, especialmente em um ambiente crítico.</p>
+<p>c. <em>Principais ameaças:</em></p>
+<ul>
+<li>falhas de hardware;</li>
+<li>incidentes de segurança (ataques cibernéticos);</li>
+<li>
+<p>falhas de conectividade;</p>
+<p><em>Ações para recuperação:</em></p>
+</li>
+<li>
+<p>Implementar redundância de hardware e rede para minimizar o impacto de falhas;</p>
+</li>
+<li>Criar um plano de resposta a incidentes que inclua procedimentos claros para identificar, conter e remediar ataques cibernéticos;</li>
+<li>backups regulares e testes de restauração para garantir que os dados possam ser recuperados rapidamente em caso de perda;</li>
+</ul>
+<p><em>Política de backup:</em></p>
+<p>Para a política de backup, recomenda-se realizar backups diários dos dados críticos e armazená-los em uma localização segura, preferencialmente fora do local principal. Além disso, é importante testar periodicamente a restauração dos backups para garantir que os dados possam ser recuperados com sucesso.</p>
+<p><em>Alta disponibilidade:</em>
+Para implementar alta disponibilidade, recomenda-se utilizar balanceadores de carga para distribuir o tráfego entre várias instâncias do sistema, como o Nginx, por exemplo. Além disso, é importante ter uma arquitetura de microserviços, onde cada serviço pode ser escalado independentemente. Utilizar clusters de banco de dados e replicação de dados também é essencial para garantir que o sistema permaneça disponível mesmo em caso de falhas em uma parte da infraestrutura.</p>
 
 
 
@@ -686,13 +827,7 @@
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../../js/init-mermaid.js# ← ADICIONE ESTA LINHA"></script>
-      
         <script src="../../assets/javascripts/badge.js" async></script>
-      
-        <script src="../../termynal.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

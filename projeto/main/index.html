@@ -93,8 +93,6 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/badge.css">
     
-      <link rel="stylesheet" href="../../termynal.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -128,6 +126,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#projeto-api" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -494,6 +497,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Projeto
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -506,6 +524,379 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-1-construcao-da-api-e-dockerinzing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 1: Construção da API e Dockerinzing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapa 1: Construção da API e Dockerinzing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-link-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 · Link rápido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 · Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 · Arquitetura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 · Segurança
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-execucao-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 · Execução Local
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 · Execução Local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-clonar-o-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Clonar o repositório
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-configurar-variaveis-de-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Configurar variáveis de ambiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-subir-a-stack-com-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. Subir a stack com Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-testando-os-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 · Testando os Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 · Testando os Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      /health-check:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      /registrar:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      /login:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar" class="md-nav__link">
+    <span class="md-ellipsis">
+      /consultar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-pipeline-de-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 · Pipeline de Deploy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7 · Pipeline de Deploy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Hub:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-composeyaml-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 · compose.yaml final
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-video-de-demonstracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 · Vídeo de demonstração
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-2-deploy-na-aws-lightsail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 2: Deploy na AWS Lightsail
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapa 2: Deploy na AWS Lightsail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-link-rapido_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 · Link rápido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-passoapasso-de-publicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 · Passo‑a‑passo de publicação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-arquitetura-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 · Arquitetura final
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-recursos-alocados-custos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 · Recursos alocados &amp; custos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 · Recursos alocados &amp; custos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projecao-para-custos-normais-fora-do-periodo-gratuito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projeção para custos normais (fora do período gratuito)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projecao-para-escalas-exigidas-us-50" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projeção para escalas exigidas (≤ US $ 50)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-funcionando-na-nuvem" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 · Funcionando na Nuvem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 · Funcionando na Nuvem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      API:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Banco de dados:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-testando-os-endpoints_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 · Testando os Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 · Testando os Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-check_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      /health-check:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registrar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      /registrar:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      /login:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      /consultar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-video-de-demonstracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 · Vídeo de demonstração
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -528,6 +919,370 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-1-construcao-da-api-e-dockerinzing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 1: Construção da API e Dockerinzing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapa 1: Construção da API e Dockerinzing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-link-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 · Link rápido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 · Endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 · Arquitetura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 · Segurança
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-execucao-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 · Execução Local
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 · Execução Local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-clonar-o-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Clonar o repositório
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-configurar-variaveis-de-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Configurar variáveis de ambiente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-subir-a-stack-com-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. Subir a stack com Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-testando-os-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 · Testando os Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 · Testando os Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      /health-check:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      /registrar:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      /login:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar" class="md-nav__link">
+    <span class="md-ellipsis">
+      /consultar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-pipeline-de-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 · Pipeline de Deploy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7 · Pipeline de Deploy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Hub:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-composeyaml-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 · compose.yaml final
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-video-de-demonstracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 · Vídeo de demonstração
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etapa-2-deploy-na-aws-lightsail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa 2: Deploy na AWS Lightsail
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Etapa 2: Deploy na AWS Lightsail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-link-rapido_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 · Link rápido
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-passoapasso-de-publicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 · Passo‑a‑passo de publicação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-arquitetura-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 · Arquitetura final
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-recursos-alocados-custos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 · Recursos alocados &amp; custos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 · Recursos alocados &amp; custos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projecao-para-custos-normais-fora-do-periodo-gratuito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projeção para custos normais (fora do período gratuito)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projecao-para-escalas-exigidas-us-50" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projeção para escalas exigidas (≤ US $ 50)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-funcionando-na-nuvem" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 · Funcionando na Nuvem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 · Funcionando na Nuvem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      API:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Banco de dados:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-testando-os-endpoints_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 · Testando os Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 · Testando os Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-check_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      /health-check:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registrar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      /registrar:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      /login:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      /consultar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-video-de-demonstracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 · Vídeo de demonstração
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -546,9 +1301,391 @@
   
 
 
-  <h1>Projeto</h1>
+<h1 id="projeto-api">Projeto API</h1>
+<p>Esta API RESTful provê <strong>cadastro e autenticação de usuários</strong> e um endpoint de <strong>consulta</strong> que realiza <em>scraping</em> em tempo‑real das últimas 10 notícias do site Hacker News.</p>
+<p><a href="https://news.ycombinator.com/">https://news.ycombinator.com/</a></p>
+<p><strong>Autores:</strong> Lucas Novais e Mariana Albuquerque</p>
+<hr />
+<h2 id="etapa-1-construcao-da-api-e-dockerinzing">Etapa 1: Construção da API e Dockerinzing</h2>
+<h3 id="1-link-rapido">1 ·  Link rápido</h3>
+<ul>
+<li><strong>Projeto no GitHub:</strong> <a href="https://github.com/lucasnov/fastapi-with-postgree">https://github.com/lucasnov/fastapi-with-postgree</a></li>
+<li><strong>Imagem no Docker Hub:</strong> <a href="https://hub.docker.com/r/lucasnov/projeto1">https://hub.docker.com/r/lucasnov/projeto1</a></li>
+</ul>
+<hr />
+<h3 id="2-endpoints">2 ·  Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Rota</th>
+<th>Descrição</th>
+<th>Autenticação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><code>/registrar</code></td>
+<td>Cria novo usuário</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td><code>/login</code></td>
+<td>Retorna <strong>JWT</strong></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/consultar</code></td>
+<td>Scraping Hacker News (Top‑10)</td>
+<td>✅ (Bearer)</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><code>/health-check</code></td>
+<td>Status da API</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">OpenAPI</p>
+<p>A página <strong>Swagger</strong> é servida em<br />
+<code>http://localhost:8000/docs</code>.</p>
+</div>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Cliente
+    participant API
+    participant DB
 
+    Cliente-&gt;&gt;API: POST /registrar
+    API-&gt;&gt;DB: INSERT users
+    API--&gt;&gt;Cliente: 201 Created
 
+    Cliente-&gt;&gt;API: POST /login
+    API-&gt;&gt;DB: SELECT users
+    API--&gt;&gt;Cliente: 200 JWT</code></pre>
+<hr />
+<h3 id="3-arquitetura">3 · Arquitetura</h3>
+<pre class="mermaid"><code>flowchart LR
+    subgraph DockerCompose ["Rede Default"]
+        direction LR
+        A[FastAPI] -- TCP 5432 --&gt; B[PostgreSQL 15]
+    end
+    U[Usuário Browser /cURL] -- HTTP 8000 --&gt; A
+</code></pre>
+<hr />
+<h3 id="4-seguranca">4 · Segurança</h3>
+<ul>
+<li>JWT de <strong>24 h</strong>.</li>
+<li>Hash de senha <em>bcrypt</em> (<code>passlib</code>).</li>
+<li>Variáveis sensíveis via <code>.env</code>.</li>
+</ul>
+<hr />
+<h3 id="5-execucao-local">5 · Execução Local</h3>
+<blockquote>
+<p><strong>Requisitos mínimos testados</strong><br />
+Docker 20.10 ou superior (já inclui o <strong>Docker Compose V2</strong> embutido no CLI).</p>
+</blockquote>
+<h4 id="a-clonar-o-repositorio">a.  Clonar o repositório</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/lucasnov/fastapi-with-postgree.git
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>fastapi-with-postgree<span class="w">       </span><span class="c1"># todos os comandos abaixo rodam na raiz do projeto</span>
+</span></code></pre></div>
+<h4 id="b-configurar-variaveis-de-ambiente">b.  Configurar variáveis de ambiente</h4>
+<p>Copie o arquivo de exemplo e ajuste credenciais, se necessário:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># edite .env (POSTGRES_USER, POSTGRES_PASSWORD, JWT_SECRET_KEY, etc.)</span>
+</span></code></pre></div>
+<details>
+<summary>.env.example</summary>
+
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>POSTGRES_USER=projeto
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>POSTGRES_PASSWORD=S3cur3P@ss
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>POSTGRES_DB=projeto
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>POSTGRES_HOST=db
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>DATABASE_URL=postgresql://projeto:S3cur3P%40ss@db:5432/projeto
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>JWT_SECRET_KEY=my_super_secret_jwt_key
+</span></code></pre></div>
+</details>
+
+<h4 id="c-subir-a-stack-com-docker-compose">c.  Subir a stack com Docker Compose</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># inicializa containers em segundo plano</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</span></code></pre></div>
+<hr />
+<h3 id="6-testando-os-endpoints">6 · Testando os Endpoints</h3>
+<h4 id="health-check">/health-check:</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;http://localhost:8000/health-check&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../assets/ep1.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/ep1.jpeg" /></a></p>
+<h4 id="registrar">/registrar:</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;http://localhost:8000/registrar&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="s1">           &quot;name&quot;: &quot;Lucas&quot;,</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="s1">           &quot;email&quot;: &quot;lucas@example.com&quot;,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="s1">           &quot;password&quot;: &quot;123456&quot;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="s1">         }&#39;</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../assets/ep2.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/ep2.jpeg" /></a></p>
+<h4 id="login">/login:</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;http://localhost:8000/login&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="s1">           &quot;email&quot;: &quot;lucas@example.com&quot;,</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="s1">           &quot;password&quot;: &quot;123456&quot;</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="s1">         }&#39;</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../assets/ep3.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/ep3.jpeg" /></a></p>
+<h4 id="consultar">/consultar</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">TOKEN</span><span class="o">=</span><span class="s2">&quot;EYJHBGCI6...COPIE_DA_RESPOSTA_DO_LOGIN&quot;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;http://localhost:8000/consultar&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">TOKEN</span><span class="si">}</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../assets/ep4.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/ep4.jpeg" /></a>
+<a class="glightbox" href="../assets/ep5.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/ep5.jpeg" /></a>
+<a class="glightbox" href="../assets/ep6.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/ep6.jpeg" /></a></p>
+<hr />
+<h3 id="7-pipeline-de-deploy">7 · Pipeline de Deploy</h3>
+<h4 id="docker-hub">Docker Hub:</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Depois de logado no devido usuário</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># Build</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>lucasnov/projeto1:v1<span class="w"> </span>.
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># Push</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>docker<span class="w"> </span>push<span class="w"> </span>lucasnov/projeto1:v1
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>docker<span class="w"> </span>tag<span class="w"> </span>lucasnov/projeto1:v1<span class="w"> </span>lucasnov/projeto1:latest
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>docker<span class="w"> </span>push<span class="w"> </span>lucasnov/projeto1:latest
+</span></code></pre></div>
+<hr />
+<h3 id="8-composeyaml-final">8 · compose.yaml final</h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">services</span><span class="p">:</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">      </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_USER:-projeto}</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_PASSWORD:-S3cur3P@ss}</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">      </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_DB:-projeto}</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">      </span><span class="nt">DATABASE_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${POSTGRES_HOST:-db}</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;5432:5432&quot;</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD-SHELL&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;pg_isready</span><span class="nv"> </span><span class="s">-U</span><span class="nv"> </span><span class="s">$${POSTGRES_USER:-projeto}</span><span class="nv"> </span><span class="s">-d</span><span class="nv"> </span><span class="s">$${POSTGRES_DB:-projeto}&quot;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5s</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">      </span><span class="nt">start_period</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">  </span><span class="nt">app</span><span class="p">:</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lucasnov/projeto1:v1</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8000:8000&quot;</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.env</span>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">    </span><span class="c1">## depende do estado “healthy” do db</span>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="w">      </span><span class="nt">db</span><span class="p">:</span>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+</span></code></pre></div>
+<blockquote>
+<p>O <code>compose.yaml</code> está na raiz do repositório.</p>
+</blockquote>
+<hr />
+<h3 id="9-video-de-demonstracao">9 · Vídeo de demonstração</h3>
+<p>YouTube: <a href="https://youtu.be/b8PeB0G_bvI">https://youtu.be/b8PeB0G_bvI</a>.</p>
+<hr />
+<h2 id="etapa-2-deploy-na-aws-lightsail">Etapa 2: Deploy na AWS Lightsail</h2>
+<p>O objetivo desta etapa foi publicar a mesma stack <strong>FastAPI + PostgreSQL</strong> na nuvem,
+utilizando <strong>Lightsail Container Service</strong> para a aplicação e <strong>Lightsail Managed Database</strong> para o banco.</p>
+<hr />
+<h3 id="1-link-rapido_1">1 ·  Link rápido</h3>
+<ul>
+<li><strong>Swagger da API:</strong> <a href="https://fastapi-service.n3a1c9dx898r2.us-east-1.cs.amazonlightsail.com/docs">https://fastapi-service.n3a1c9dx898r2.us-east-1.cs.amazonlightsail.com/docs</a></li>
+</ul>
+<hr />
+<h3 id="2-passoapasso-de-publicacao">2 · Passo‑a‑passo de publicação</h3>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    participant Dev
+    participant DockerHub
+    participant Lightsail
+    participant DB as "Lightsail DB"
+    Dev-&gt;&gt;DockerHub: docker push lucasnov/projeto1:v1
+    Dev-&gt;&gt;Lightsail: create container‑service\n(app lucasnov/projeto1:v1)
+    Lightsail--&gt;&gt;Dev: Endpoint HTTPS
+    Dev-&gt;&gt;DB: create database fastapi-db
+    Dev-&gt;&gt;Lightsail: update env vars (DATABASE_URL…)
+    Lightsail--&gt;&gt;Dev: Health ✔</code></pre>
+<ol>
+<li><strong>Imagem pronta</strong> no Docker Hub – <code>lucasnov/projeto1:v1</code>.</li>
+<li><strong>Criação do container service</strong>  </li>
+<li>Service name: <code>fastapi-service</code>  </li>
+<li>Power: <strong>Micro 1 GB, US $ 10</strong> (primeiros 90 dias free).</li>
+<li>Scale: <strong>1</strong> nó  </li>
+<li>Public endpoint: porta <strong>8000</strong> com health‑check em <code>/health-check</code>.</li>
+<li><strong>Criação do banco gerenciado</strong>  </li>
+<li>Plan: <strong>Standard 1 GB, US $ 15</strong> (primeiros 90 dias free).  </li>
+<li>
+<p>Public mode: <strong>on</strong> para permitir acesso externo.</p>
+<p><a class="glightbox" href="../assets/db1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="../assets/db1.png" /></a></p>
+</li>
+<li>
+<p><strong>Variáveis de ambiente</strong> configuradas no container.</p>
+</li>
+<li>
+<p><strong>Deploy</strong> → <code>Save &amp; deploy</code> (ou <code>aws lightsail create-container-service-deployment …</code>).</p>
+<p><a class="glightbox" href="../assets/api1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="../assets/api1.png" /></a></p>
+</li>
+</ol>
+<hr />
+<h3 id="3-arquitetura-final">3 · Arquitetura final</h3>
+<pre class="mermaid"><code>graph LR
+    U[Usuário] -- HTTPS 443 --&gt; C[Container Service: FastAPI]
+    C -- TCP 5432 --&gt; D[Managed PostgreSQL 1 GB]
+    classDef box fill:#F3F4F6,stroke:#CBD5E1,stroke-width:1px;
+    class C,D box;</code></pre>
+<ul>
+<li><strong>Plano do container:</strong> Micro 1 GB RAM, 0 .25 vCPU (trial 90 dias)</li>
+</ul>
+<p><a class="glightbox" href="../assets/api3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="../assets/api3.png" /></a></p>
+<ul>
+<li><strong>Plano do banco:</strong> Standard 1 GB, 2 vCPU, 40 GB SSD (trial 90 dias).</li>
+</ul>
+<p><a class="glightbox" href="../assets/db2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="../assets/db2.png" /></a></p>
+<hr />
+<h3 id="4-recursos-alocados-custos">4 · Recursos alocados &amp; custos</h3>
+<p><strong>Período gratuito de 90 dias</strong> – Tanto o plano <strong>Micro</strong> do Container Service (1 GB) quanto o plano <strong>Standard 1 GB</strong> do banco gerenciado têm isenção total nos três primeiros meses para a <strong>primeira</strong> instância de cada serviço. Enquanto essa franquia estiver ativa, não haverá cobranças mensais.</p>
+<p><a class="glightbox" href="../assets/custo1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="../assets/custo1.png" /></a></p>
+<p><a class="glightbox" href="../assets/custo2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="../assets/custo2.png" /></a></p>
+<h4 id="projecao-para-custos-normais-fora-do-periodo-gratuito">Projeção para custos normais (fora do período gratuito)</h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Plano</th>
+<th style="text-align: right;">Preço</th>
+<th style="text-align: right;">Qtde</th>
+<th style="text-align: right;">Sub‑total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container Service</td>
+<td>Micro (1 GB)</td>
+<td style="text-align: right;"><strong>US $ 10</strong></td>
+<td style="text-align: right;">1 nó</td>
+<td style="text-align: right;"><strong>US $ 10</strong></td>
+</tr>
+<tr>
+<td>Database</td>
+<td>Standard 1 GB</td>
+<td style="text-align: right;"><strong>US $ 15</strong></td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;"><strong>US $ 15</strong></td>
+</tr>
+<tr>
+<td><strong>Total (após 90 dias)</strong></td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>US $ 25 / mês</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="projecao-para-escalas-exigidas-us-50">Projeção para escalas exigidas (≤ US $ 50)</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Réplicas</th>
+<th style="text-align: right;">Nós Micro</th>
+<th style="text-align: right;">Custo Container</th>
+<th style="text-align: right;">+ DB 1 GB</th>
+<th style="text-align: right;"><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1 × 10 = 10</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;"><strong>25</strong></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5 × 10 = 50</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;"><strong>65</strong> ⚠</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10 × 10 = 100</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;"><strong>115</strong> 🚫</td>
+</tr>
+</tbody>
+</table>
+<p><em>Para 5 nós dentro do limite basta trocar para </em><em>Nano (US $ 7)</em><em> → 5 × 7 + 15 = </em><em>50</em><em>.</em></p>
+<hr />
+<h3 id="5-funcionando-na-nuvem">5 · Funcionando na Nuvem</h3>
+<h4 id="api">API:</h4>
+<p><a class="glightbox" href="../assets/api4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="../assets/api4.png" /></a></p>
+<h4 id="banco-de-dados">Banco de dados:</h4>
+<p><a class="glightbox" href="../assets/db3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="../assets/db3.png" /></a></p>
+<hr />
+<h3 id="6-testando-os-endpoints_1">6 · Testando os Endpoints</h3>
+<h4 id="health-check_1">/health-check:</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;https://fastapi-service.n3a1c9dx898r2.us-east-1.cs.amazonlightsail.com/health-check&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../assets/aws1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/aws1.png" /></a></p>
+<h4 id="registrar_1">/registrar:</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://fastapi-service.n3a1c9dx898r2.us-east-1.cs.amazonlightsail.com/registrar&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="s1">           &quot;name&quot;: &quot;Lucas&quot;,</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="s1">           &quot;email&quot;: &quot;lucas@example.com&quot;,</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="s1">           &quot;password&quot;: &quot;123456&quot;</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="s1">         }&#39;</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../assets/aws2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/aws2.png" /></a></p>
+<h4 id="login_1">/login:</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s1">&#39;https://fastapi-service.n3a1c9dx898r2.us-east-1.cs.amazonlightsail.com/login&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="s1">           &quot;email&quot;: &quot;lucas@example.com&quot;,</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="s1">           &quot;password&quot;: &quot;123456&quot;</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="s1">         }&#39;</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../assets/aws3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/aws3.png" /></a></p>
+<h4 id="consultar_1">/consultar</h4>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nv">TOKEN</span><span class="o">=</span><span class="s2">&quot;EYJHBGCI6...COPIE_DA_RESPOSTA_DO_LOGIN&quot;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;https://fastapi-service.n3a1c9dx898r2.us-east-1.cs.amazonlightsail.com/consultar&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">     </span>-H<span class="w"> </span><span class="s1">&#39;accept: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="si">${</span><span class="nv">TOKEN</span><span class="si">}</span><span class="s2">&quot;</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../assets/aws4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/aws4.png" /></a>
+<a class="glightbox" href="../assets/aws5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/aws5.png" /></a>
+<a class="glightbox" href="../assets/aws6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Endpoints OK" src="../assets/aws6.png" /></a></p>
+<hr />
+<h3 id="7-video-de-demonstracao">7 · Vídeo de demonstração</h3>
+<p>YouTube: <a href="https://youtu.be/AqCB2RlE4mc">https://youtu.be/AqCB2RlE4mc</a>.</p>
+<hr />
 
 
 
@@ -616,13 +1753,7 @@
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../../js/init-mermaid.js# ← ADICIONE ESTA LINHA"></script>
-      
         <script src="../../assets/javascripts/badge.js" async></script>
-      
-        <script src="../../termynal.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
